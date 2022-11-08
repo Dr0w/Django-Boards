@@ -5,10 +5,6 @@ from .forms import NewTopicForm
 from .models import Board, Topic, Post
 
 
-def signup(request):
-    return render(request, 'signup.html')
-
-
 def home(request):
     boards = Board.objects.all()
     return render(request, 'home.html', {'boards': boards})
